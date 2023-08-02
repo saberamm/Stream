@@ -1,4 +1,4 @@
-package ir.maktab.model;
+package ir.Stream.model;
 
 import java.util.Date;
 
