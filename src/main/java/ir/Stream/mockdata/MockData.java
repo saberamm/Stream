@@ -19,9 +19,10 @@ public class MockData {
         try {
             InputStream inputStream = Resources.getResource("people.json").openStream();
             String json = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
-            Type listType = new TypeToken<ArrayList<Person>>(){}.getType();
+            Type listType = new TypeToken<ArrayList<Person>>() {
+            }.getType();
             return new Gson().fromJson(json, listType);
-        } catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
             return null;
         }
